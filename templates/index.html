@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Mobile Byte Tutorial</title>
+    <title>Exploring y Mobile Data</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -59,22 +59,16 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-	<h1>Data Pipeline Project Mobile Byte Example</h1>
-        <p>This is the Mobile Byte of the Data Pipeline class.</p>
+	<h1>Mobile Data Exploration</h1>
+        <p>In this Byte, I am trying to explore the relationship between the time and activities and the relationship 
+        between time time and locations in the data collected from my mobile phone. 
+        I will specifically look at where and when I have spent most of the time in the past few weeks. 
+        Also, I am interested in when I used my phone most.</p>
       </div>
 
-   <h2>Query Results</h2>
-   <ul>
-   {% for item in queries %}
-   <li>Query: {{item.query}}<br>
-       {% for row in item.results %}
-          {{row}}<br>
-       {% endfor %}
-   </li>
-   {% endfor %}
-   </ul>
-   
-   <h2>Vega-lite Chart</h2>
+
+   <h2>Raw Location Data</h2>
+ <p>Below is the graph that shows the original data from Locations table. As we can see, the count of Feb 10 is significantly higher. It is because on that day I drove for five hours to Michigan to participate a pool tournament. Also, I spent the weekend Feb 11-12 in Michigan and drove back from 22:00, Feb 12 - 4:00 Feb 13.  As I am exploring my usual behaviors in locations, the data in this period is an outlier with this regard. Therefore, I cleaned the data in Trifacta. Other things I have done in Trifacta was to transform the timestamp to the date in our time zone and deleted some columns that are not relevant to my exploration.</p> 
    
    <!-- Example of Vega-lite graph -->
    <div id="vis"></div>
@@ -118,8 +112,11 @@
 	    // result.view is the View, which resides under the '#vis' element
 	  });
   </script>
-
-   <div class="page-header">
+	
+	<h2>Where I Spent Most of My Time</h2>
+	<p>Below is the map that demonstrates where I stayed most frequently in the past month. The red areas mean the spots where I spent most of the time and these data confirmed my daily schedule. The areas include my house (where I sleep and live), Annex Building (The METALS studio where I work and study, Craig Street 407 (where I attend classes for 7 hours in total a week), University Center (where I spend some time studying, but most of the time I play pool there :-)), and the bus stops between CMU and my home. </p>
+	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col5%2C+col6%2C+col2+from+1Z8RKEf7AIlmvrLX9ayEQR9-1o73LveCzW7aDMJ4N+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=40.43804192777642&amp;lng=-79.93307996654511&amp;t=1&amp;z=15&amp;l=col5&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=0.66&amp;hmr=15&amp;hmw=2&amp;hml=TWO_COL_LAT_LNG"></iframe>
+  <div class="page-header">
 		<p> You should add information here, including some tables
 		and/or charts, telling the reader about the relationship
 		  between time and activity in your data.</p>

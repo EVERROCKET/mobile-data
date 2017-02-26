@@ -114,18 +114,15 @@
   </script>
 	
 	<h2>Where I Spent Most of My Time</h2>
-	<p>Below is the map that demonstrates where I stayed most frequently in the past month. The red areas mean the spots where I spent most of the time and these data confirmed my daily schedule. The areas include my house (where I sleep and live), Annex Building (The METALS studio where I work and study, Craig Street 407 (where I attend classes for 7 hours in total a week), University Center (where I spend some time studying, but most of the time I play pool there :-)), and the bus stops between CMU and my home. </p>
+	<p>Below is the map that demonstrates where I stayed most frequently in the past month. The red areas mean the spots where I spent most of the time and these data confirmed my daily schedule. The areas include my house (where I sleep and live), Annex Building (The METALS studio where I work and study), Craig Street 407 (where I attend classes for 7 hours in total a week), University Center (where I spend some time studying, but most of the time I play pool there :-)), and the bus stops between CMU and my home. </p>
 	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col5%2C+col6%2C+col2+from+1Z8RKEf7AIlmvrLX9ayEQR9-1o73LveCzW7aDMJ4N+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=40.43804192777642&amp;lng=-79.93307996654511&amp;t=1&amp;z=15&amp;l=col5&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=0.66&amp;hmr=15&amp;hmw=2&amp;hml=TWO_COL_LAT_LNG"></iframe>
-  <div class="page-header">
-		<p> You should add information here, including some tables
-		and/or charts, telling the reader about the relationship
-		  between time and activity in your data.</p>
-	
-		<p> You should also add information here, including some tables
-		and/or charts, telling the reader about the relationship
-		between time and location in your data.</p>
+ 		
+	<h2>Activities by Day</h2>
+	<p>Below is the graph that represents my daily activities in the past few weeks. The data is from plugin_google_activity_recognition. It labels my activities as running, walking, still, in_vehicle and unknown. I deleted Unknown data and other data that are not related to my goal. Finally, the resulting data I got are the separate tables for each type of activity with counts. For visualization, I did not use Vega-lite as it doesn’t have a friendly graphical interface for users to visualize the data. Instead, I used plot.ly in which I could upload my data and chose a graph to play with. </p>
+	<iframe width="900" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~junyu/10.embed"></iframe>
+ <div class="page-header">
 		
-		
+
     </div> <!-- /page-header -->
    </div> <!-- /container -->
 
